@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">FZ App</string>
+
+    <string name="titleLogin">Login</string>
+    <string name="titleHeadAccount">Create Account</string>
+    <string name="titleMessege">Informasi</string>
+    <string name="titleDownload">Download</string>
+    <string name="titleProfile">Profile</string>
+    <string name="titlePassword">Password</string>
+    <string name="titleSyncData1">Sinkronisasi</string>
+    <string name="titleSyncData2">Data</string>
+    <string name="titleUpload">Upload</string>
+    <string name="titleLogout">Logout</string>
+    <string name="titleChangePassword">Change Password</string>
+    <string name="titleTaskInput">Task Status</string>
+    <string name="titleTaskList">Task List</string>
+    <string name="titleReason">Reason</string>
+    <string name="titleKlik">Klik Tombol</string>
+    <string name="titleRencana1">Rencana</string>
+    <string name="titleRencana2">Aktifitas</string>
+    <string name="titleMulaiRencana">Mulai</string>
+    <string name="titleTugas1">Tugas</string>
+    <string name="titleTugas2">Sekarang</string>
+
+    <string name="strCreateAkun">Don\'t have an account ?<u>Create Account</u></string>
+    <string name="strSubmitLogin">Submit</string>
+    <string name="strAccountData">Account Data</string>
+    <string name="strBtnOK">OK</string>
+    <string name="strBtnCancel">Batal</string>
+    <string name="strWait">Harap tunggu</string>
+    <string name="strLoginProcess">Processing login</string>
+    <string name="strTaskListProcess">Processing task list</string>
+    <string name="strStorageAccessDenied">Access not allowed</string>
+    <string name="strButtonChange">Change</string>
+    <string name="strButtonCancel">Cancel</string>
+    <string name="strPasswordSame">Input different password</string>
+    <string name="strPasswordVerification">Check Verification</string>
+    <string name="strOldPasswordBlank">Input Old Password</string>
+    <string name="strNewPasswordBlank">Input New Password</string>
+    <string name="strVerificationBlank">Input Verification</string>
+    <string name="strLogoutApps">Logout current user ?</string>
+    <string name="strServerResponse">Server not response</string>
+    <string name="strServerFailure">Response from server failure</string>
+    <string name="strServerData">Response from server not recognized</string>
+    <string name="strStorageNotAllowed">Write to storage not allowed</string>
+    <string name="strTaskListReload">Reload tasklist data</string>
+    <string name="strExpectedTime">Start :</string>
+    <string name="strDatabaseFailed">Init database failed</string>
+    <string name="strDeviceNotSupported">"This device is not supported"</string>
+    <string name="strStartLocation">"Failed to start location"</string>
+    <string name="strCurrentLocation">"Failed to current location"</string>
+    <string name="strConnectionFailed">"Connection failed"</string>
+    <string name="strGPSFailed">"GPS not active. Enable GPS ?"</string>
+    <string name="strReason">Input reason please</string>
+    <string name="strTaskListDone">"already done ?"</string>
+    <string name="strInputReason">"Input reason for"</string>
+    <string name="strEstimateTime">"Estimate Time"</string>
+    <string name="strAccurateTime">"Accurate Time"</string>
+    <string name="strDueTime">"Current"</string>
+    <string name="strDestiny">"Pergi Ke"</string>
+    <string name="strMinute">"Menit"</string>
+    <string name="strTaskStateDone">"TaskList already done"</string>
+    <string name="strFullnameEmpty">"Input fullname please"</string>
+    <string name="strPhonenameEmpty">"Input phone numer please"</string>
+    <string name="strRegistrationSuccess">"Registration for new user success"</string>
+    <string name="strSyncFinish">"Upload data finished"</string>
+    <string name="strSyncProgress">"Upload data in progress"</string>
+    <string name="strUploadDataEmpty">"Data already uploaded or empty"</string>
+    <string name="strUploadDataFailed">"Failed read data for upload"</string>
+    <string name="strUploadData">"already uploaded or empty"</string>
+    <string name="strStartTask">"Expected : %s"</string>
+    <string name="strStartFinish">"Actual : %s"</string>
+    <string name="strDutyDone">"Selesai"</string>
+    <string name="strDutyFail">"Tidak"</string>
+
+    <string name="msgInputUserID">Masukan nama user</string>
+    <string name="msgInputPassword">Masukan password</string>
+
+    <string name="hintHPNumber">Phone Number<font color='red'>*</font></string>
+    <string name="hintPassword">Password<font color='red'>*</font></string>
+    <string name="hintPasswordVerification">Verification<font color='red'>*</font></string>
+    <string name="hintNewPassword">New Password<font color='red'>*</font></string>
+    <string name="hintOldPassword">Old Password<font color='red'>*</font></string>
+    <string name="hintVerificationPassword">Verification<font color='red'>*</font></string>
+    <string name="hintUserID">Nama User<font color='red'>*</font></string>
+    <string name="hintUsername">Username<font color='red'>*</font></string>
+    <string name="hintTaskInput">Input task status<font color='red'>*</font></string>
+    <string name="hintReason">Input the reason<font color='red'>*</font></string>
+</resources>
