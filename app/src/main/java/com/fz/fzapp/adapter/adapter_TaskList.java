@@ -2,12 +2,10 @@ package com.fz.fzapp.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -15,15 +13,8 @@ import butterknife.OnClick;
 import com.fz.fzapp.R;
 import com.fz.fzapp.data.TaskListData;
 import com.fz.fzapp.model.TaskListResponse;
-import com.fz.fzapp.popup.ReasonStatus;
-import com.fz.fzapp.service.AllFunction;
-import com.fz.fzapp.utils.PopupMessege;
-import com.fz.fzapp.utils.Preference;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Dibuat oleh : ignat

@@ -12,4 +12,5 @@ public class Preference
 	public static final String prefSyncDate = "prefSyncDate";
 	public static final String prefSyncTime = "prefSyncTime";
 	public static final String prefTimeTrack = "prefTimeTrack";
+	public static final String prefDutyTask = "prefDutyTask";
 }

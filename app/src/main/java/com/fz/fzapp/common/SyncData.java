@@ -1,18 +1,11 @@
 package com.fz.fzapp.common;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.SupportMenuInflater;
-import android.support.v7.view.menu.MenuBuilder;
-import android.support.v7.view.menu.MenuPopupHelper;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -23,13 +16,9 @@ import butterknife.OnClick;
 import com.fz.fzapp.R;
 import com.fz.fzapp.adapter.adapter_AllTaskList;
 import com.fz.fzapp.data.TaskList;
-import com.fz.fzapp.data.User;
-import com.fz.fzapp.pojo.LoginPojo;
 import com.fz.fzapp.pojo.TaskListPojo;
-import com.fz.fzapp.popup.ChangePassword;
 import com.fz.fzapp.popup.OtherOption;
 import com.fz.fzapp.sending.TaskListHolder;
-import com.fz.fzapp.sending.UserHolder;
 import com.fz.fzapp.service.AllFunction;
 import com.fz.fzapp.service.DataLink;
 import com.fz.fzapp.utils.FixValue;
@@ -80,7 +69,7 @@ public class SyncData extends AppCompatActivity
       tvMsg.setText(context.getResources().getString(R.string.titleKlik));
       btnCancelGo.setVisibility(View.GONE);
       ivGo.setBackgroundResource(R.drawable.buttonthick);
-      popupMessege.ShowMessege1(context, context.getResources().getString(R.string.strServerResponse));
+      popupMessege.ShowMessege1(context, context.getResources().getString(R.string.msgServerResponse));
       return;
     }
 
@@ -113,8 +102,11 @@ public class SyncData extends AppCompatActivity
           else if(response.body().getCoreResponse().getCode() == FixValue.intSuccess)
           {
             Log.d(TAG, "onResponse: 2");
+            AllFunction.storeToSharedPref(context, 1, Preference.prefDutyTask);
+
             adapter_AllTaskList.initAllTaskList();
             adapter_AllTaskList.getInstance().setAlltaskList(response.body().getTaskListResponse());
+
             Intent NamaUserIntent = new Intent(SyncData.this, Planning.class);
             startActivity(NamaUserIntent);
             finish();
@@ -126,7 +118,7 @@ public class SyncData extends AppCompatActivity
           tvMsg.setText(context.getResources().getString(R.string.titleKlik));
           btnCancelGo.setVisibility(View.GONE);
           ivGo.setBackgroundResource(R.drawable.buttonthick);
-          popupMessege.ShowMessege1(context, getResources().getString(R.string.strServerData));
+          popupMessege.ShowMessege1(context, getResources().getString(R.string.msgServerData));
         }
       }
 
@@ -136,7 +128,7 @@ public class SyncData extends AppCompatActivity
         tvMsg.setText(context.getResources().getString(R.string.titleKlik));
         btnCancelGo.setVisibility(View.GONE);
         ivGo.setBackgroundResource(R.drawable.buttonthick);
-        popupMessege.ShowMessege1(context, getResources().getString(R.string.strServerFailure));
+        popupMessege.ShowMessege1(context, getResources().getString(R.string.msgServerFailure));
       }
     });
   }

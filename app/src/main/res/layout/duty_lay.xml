@@ -8,8 +8,7 @@
         tools:context="com.fz.fzapp.common.SyncData"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin">
+        android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
        style="@style/DefaultUtils3"
@@ -83,6 +82,7 @@
                    android:text="00:00"
                    android:textSize="38sp"
                    android:layout_width="match_parent"
+                   android:id="@+id/tvCountTime"
                    android:layout_height="match_parent" android:gravity="center"/>
             </RelativeLayout>
 
@@ -115,102 +115,103 @@
                android:id="@+id/tvDestiny"/>
 
             <Button
-                    android:layout_width="108dp"
-                    android:layout_height="66dp"
+                    android:layout_width="126dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/rectorangetrans"
                     android:ems="10"
                     android:text="Task"
-                    android:id="@+id/btnDestiny"
+                    android:id="@+id/btnDestinyTask"
                     android:layout_centerHorizontal="true" android:textAllCaps="false"/>
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-       android:layout_below="@+id/llTimer"
-       android:layout_width="wrap_content"
-       android:layout_height="match_parent"
-       android:orientation="vertical"
-       android:layout_alignParentBottom="true"
-       android:layout_alignParentLeft="true"
-       android:layout_alignParentStart="true">
-
-        <ImageView
-           android:id="@+id/ivMaps"
-           android:layout_width="match_parent"
-           android:layout_height="180dp"
-           android:layout_below="@+id/splitter"
-           android:background="@drawable/peta"
-           android:layout_marginTop="20dp"
-           android:layout_alignParentLeft="true"
-           android:layout_alignParentStart="true"
-           android:layout_alignParentRight="true"
-           android:layout_alignParentEnd="true"
-           android:layout_marginBottom="20dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/llStatus"
-            android:orientation="horizontal"
+    <RelativeLayout
+            android:id="@+id/llMaps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/llTimer"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="20dp"
-            android:weightSum="8">
+            android:layout_marginTop="10dp">
 
-             <Button
-                style="@style/DefaultButton"
-                android:ems="10"
-                android:text="@string/strDutyDone"
-                android:id="@+id/btnDutyDone"
-                android:layout_centerHorizontal="true"
-                android:layout_marginRight="7dip"
-                android:layout_weight="3"/>
-
-             <Button
-                style="@style/DefaultGrayButton"
-                android:ems="10"
-                android:text="@string/strDutyFail"
-                android:id="@+id/btnDutyFail"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="7dip"
-                android:layout_weight="5"/>
-         </LinearLayout>
-
-        <Button
-           style="@style/DefaultSplitter"
-           android:layout_below="@+id/textView"
-           android:id="@+id/splitter2"
-           android:layout_marginBottom="8dp"
-           android:layout_alignLeft="@+id/textView"
-           android:layout_alignStart="@+id/textView"/>
+        <ImageView
+                android:id="@+id/ivMaps"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/peta"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_above="@+id/llStatus"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentTop="true"/>
 
         <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:id="@+id/llTimeDuty"
-           android:orientation="horizontal"
-           android:weightSum="8">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llStatus"
+                android:orientation="horizontal"
+                android:weightSum="8"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_above="@+id/llTimeDuty"
+                android:layout_marginBottom="20dp">
 
-            <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:ems="10"
-               android:text="@string/strEstimateTime"
-               android:id="@+id/tvEstTime"
-               android:layout_centerHorizontal="true"
-               android:layout_marginRight="7dip"
-               android:layout_weight="4"/>
+            <Button
+                    style="@style/DefaultButton"
+                    android:ems="10"
+                    android:text="@string/strDutyDone"
+                    android:id="@+id/btnDutyDone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="7dip"
+                    android:layout_weight="3"/>
 
-            <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:ems="10"
-               android:text="@string/strAccurateTime"
-               android:id="@+id/tvActTime"
-               android:layout_centerHorizontal="true"
-               android:layout_marginLeft="7dip"
-               android:layout_weight="4"/>
+            <Button
+                    style="@style/DefaultGrayButton"
+                    android:ems="10"
+                    android:text="@string/strDutyFail"
+                    android:id="@+id/btnDutyFail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="7dip"
+                    android:layout_weight="5"/>
         </LinearLayout>
-    </LinearLayout>
+
+        <Button
+                style="@style/DefaultSplitter"
+                android:id="@+id/splitter2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_above="@+id/llTimeDuty"
+                android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llTimeDuty"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:weightSum="4"
+                android:layout_marginBottom="8dp">
+
+            <TextView
+                    android:layout_width="154dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="@string/strStartTask"
+                    android:id="@+id/tvEstTime"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="7dip"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="@string/strStartFinish"
+                    android:id="@+id/tvActTime"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="7dip"/>
+        </LinearLayout>
+    </RelativeLayout>
+
 </RelativeLayout>

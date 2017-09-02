@@ -117,7 +117,7 @@ public class ChangePassword extends Dialog
     if(AllFunction.isNetworkAvailable(context) == FixValue.TYPE_NONE)
     {
       progressDialog.dismiss();
-      popupMessege.ShowMessege1(context, context.getResources().getString(R.string.strServerResponse));
+      popupMessege.ShowMessege1(context, context.getResources().getString(R.string.msgServerResponse));
       return;
     }
 
@@ -146,14 +146,14 @@ public class ChangePassword extends Dialog
             dismiss();
         }
         else
-          popupMessege.ShowMessege1(context, context.getResources().getString(R.string.strServerData));
+          popupMessege.ShowMessege1(context, context.getResources().getString(R.string.msgServerData));
       }
 
       @Override
       public void onFailure(Call<LoginPojo> call, Throwable t)
       {
         progressDialog.dismiss();
-        popupMessege.ShowMessege1(context, context.getResources().getString(R.string.strServerFailure));
+        popupMessege.ShowMessege1(context, context.getResources().getString(R.string.msgServerFailure));
       }
     });
   }

@@ -34,7 +34,7 @@ public class Splash extends AppCompatActivity
     }
     catch (PackageManager.NameNotFoundException e)
     {
-      e.printStackTrace();
+      // e.printStackTrace();
     }
 
     tvAppVersion.setText("Version " + myVersionName);

@@ -34,6 +34,9 @@ public class TaskListResponse
   @SerializedName("StatusTask")
   @Expose
   private Integer statustask;
+  @SerializedName("UploadTask")
+  @Expose
+  private Integer uploadtask;
 
   public Integer getTaskID() {
     return taskID;
@@ -103,5 +106,13 @@ public class TaskListResponse
   public void setStatustask(Integer statustask)
   {
     this.statustask = statustask;
+  }
+
+  public Integer getUploadtask() {
+    return uploadtask;
+  }
+
+  public void setUploadtask(Integer uploadtask) {
+    this.uploadtask = uploadtask;
   }
 }

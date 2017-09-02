@@ -39,9 +39,6 @@
     <string name="strNewPasswordBlank">Input New Password</string>
     <string name="strVerificationBlank">Input Verification</string>
     <string name="strLogoutApps">Logout current user ?</string>
-    <string name="strServerResponse">Server not response</string>
-    <string name="strServerFailure">Response from server failure</string>
-    <string name="strServerData">Response from server not recognized</string>
     <string name="strStorageNotAllowed">Write to storage not allowed</string>
     <string name="strTaskListReload">Reload tasklist data</string>
     <string name="strExpectedTime">Start :</string>
@@ -54,11 +51,9 @@
     <string name="strReason">Input reason please</string>
     <string name="strTaskListDone">"already done ?"</string>
     <string name="strInputReason">"Input reason for"</string>
-    <string name="strEstimateTime">"Estimate Time"</string>
-    <string name="strAccurateTime">"Accurate Time"</string>
     <string name="strDueTime">"Current"</string>
     <string name="strDestiny">"Pergi Ke"</string>
-    <string name="strMinute">"Menit"</string>
+    <string name="strMinute">"Jam : Menit"</string>
     <string name="strTaskStateDone">"TaskList already done"</string>
     <string name="strFullnameEmpty">"Input fullname please"</string>
     <string name="strPhonenameEmpty">"Input phone numer please"</string>
@@ -68,13 +63,16 @@
     <string name="strUploadDataEmpty">"Data already uploaded or empty"</string>
     <string name="strUploadDataFailed">"Failed read data for upload"</string>
     <string name="strUploadData">"already uploaded or empty"</string>
-    <string name="strStartTask">"Expected : %s"</string>
-    <string name="strStartFinish">"Actual : %s"</string>
+    <string name="strStartTask">"Mulai : %s"</string>
+    <string name="strStartFinish">"Selesai : %s"</string>
     <string name="strDutyDone">"Selesai"</string>
     <string name="strDutyFail">"Tidak"</string>
 
     <string name="msgInputUserID">Masukan nama user</string>
     <string name="msgInputPassword">Masukan password</string>
+    <string name="msgServerResponse">Server tidak merespon</string>
+    <string name="msgServerFailure">Server tidak dikenali</string>
+    <string name="msgServerData">Respon dari server tidak dikenali</string>
 
     <string name="hintHPNumber">Phone Number<font color='red'>*</font></string>
     <string name="hintPassword">Password<font color='red'>*</font></string>

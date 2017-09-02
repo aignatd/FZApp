@@ -12,8 +12,6 @@ import android.support.v7.view.menu.MenuPopupHelper;
 import android.view.MenuItem;
 import android.view.View;
 import com.fz.fzapp.R;
-import com.fz.fzapp.common.SyncData;
-import com.fz.fzapp.common.Username;
 import com.fz.fzapp.data.User;
 import com.fz.fzapp.pojo.LoginPojo;
 import com.fz.fzapp.sending.UserHolder;
@@ -117,7 +115,7 @@ public class OtherOption
     if(AllFunction.isNetworkAvailable(context) == FixValue.TYPE_NONE)
     {
       progressDialog.dismiss();
-      popupMessege.ShowMessege1(context, context.getResources().getString(R.string.strServerResponse));
+      popupMessege.ShowMessege1(context, context.getResources().getString(R.string.msgServerResponse));
       return;
     }
 
@@ -147,14 +145,14 @@ public class OtherOption
             activity.finish();
           }
         }else
-          popupMessege.ShowMessege1(context, context.getResources().getString(R.string.strServerData));
+          popupMessege.ShowMessege1(context, context.getResources().getString(R.string.msgServerData));
       }
 
       @Override
       public void onFailure(Call<LoginPojo> call, Throwable t)
       {
         progressDialog.dismiss();
-        popupMessege.ShowMessege1(context, context.getResources().getString(R.string.strServerFailure));
+        popupMessege.ShowMessege1(context, context.getResources().getString(R.string.msgServerFailure));
       }
     });
   }
