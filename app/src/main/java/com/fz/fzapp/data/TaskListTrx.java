@@ -7,58 +7,81 @@ package com.fz.fzapp.data;
  */
 public class TaskListTrx
 {
-  private int ReportID;
-  private int lnkUserID;
-  private int lnkTaskID;
-  private int lnkLocationID;
+  private Integer ReportID;
+  private Integer lnkUserID;
+  private Integer lnkTaskID;
+  private Integer lnkReasonID;
+  private Integer lnkLocationID;
   private String Notes;
-  private int Status;
+  private Integer Status;
 
-  public int getReportID() {
+  public Integer getReportID()
+  {
     return ReportID;
   }
 
-  public void setReportID(int reportID) {
+  public void setReportID(Integer reportID)
+  {
     ReportID = reportID;
   }
 
-  public int getLnkUserID() {
+  public Integer getLnkUserID()
+  {
     return lnkUserID;
   }
 
-  public void setLnkUserID(int lnkUserID) {
+  public void setLnkUserID(Integer lnkUserID)
+  {
     this.lnkUserID = lnkUserID;
   }
 
-  public int getLnkTaskID() {
+  public Integer getLnkTaskID()
+  {
     return lnkTaskID;
   }
 
-  public void setLnkTaskID(int lnkTaskID) {
+  public void setLnkTaskID(Integer lnkTaskID)
+  {
     this.lnkTaskID = lnkTaskID;
   }
 
-  public int getLnkLocationID() {
+  public Integer getLnkReasonID()
+  {
+    return lnkReasonID;
+  }
+
+  public void setLnkReasonID(Integer lnkReasonID)
+  {
+    this.lnkReasonID = lnkReasonID;
+  }
+
+  public Integer getLnkLocationID()
+  {
     return lnkLocationID;
   }
 
-  public void setLnkLocationID(int lnkLocationID) {
+  public void setLnkLocationID(Integer lnkLocationID)
+  {
     this.lnkLocationID = lnkLocationID;
   }
 
-  public String getNotes() {
+  public String getNotes()
+  {
     return Notes;
   }
 
-  public void setNotes(String notes) {
+  public void setNotes(String notes)
+  {
     Notes = notes;
   }
 
-  public int getStatus() {
+  public Integer getStatus()
+  {
     return Status;
   }
 
-  public void setStatus(int status) {
+  public void setStatus(Integer status)
+  {
     Status = status;
   }
 }

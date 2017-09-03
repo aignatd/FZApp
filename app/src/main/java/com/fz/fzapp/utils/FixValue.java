@@ -16,7 +16,8 @@ public class FixValue
 	public static final String RestfulTasklist = "tasks/tasklist";
 	public static final String RestfulTasklistTrx = "tasks/tasksync";
 	public static final String RestfulChangePassword = "users/changepassword";
-  	public static final String RestfulRegistration = "users/registration";
+  public static final String RestfulRegistration = "users/registration";
+	public static final String RestfulReasonlist = "reasons/reasonlist";
 
 	public static final int TimeoutConnection = 45000;
 	public static final int TYPE_NONE = 0;

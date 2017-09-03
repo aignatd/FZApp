@@ -11,7 +11,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.fz.fzapp.R;
-import com.fz.fzapp.adapter.adapter_Database;
+import com.fz.fzapp.adapter.Database_adapter;
 import com.fz.fzapp.data.User;
 import com.fz.fzapp.service.AllFunction;
 
@@ -41,11 +41,11 @@ public class Username extends AppCompatActivity
 
     if(AllFunction.CheckPermission(Username.this, this))
     {
-      File file = getApplicationContext().getDatabasePath(adapter_Database.databasename);
+      File file = getApplicationContext().getDatabasePath(Database_adapter.databasename);
 
       if(!file.exists())
       {
-        adapter_Database DataBaseTasklist = new adapter_Database(this);
+        Database_adapter DataBaseTasklist = new Database_adapter(this);
         DataBaseTasklist.getReadableDatabase();
 
         if(!copyDatabase(this)) return;
@@ -82,8 +82,8 @@ public class Username extends AppCompatActivity
   {
     try
     {
-      InputStream inputStream = context.getAssets().open(adapter_Database.databasename);
-      String strFile = adapter_Database.databaselocation + adapter_Database.databasename;
+      InputStream inputStream = context.getAssets().open(Database_adapter.databasename);
+      String strFile = Database_adapter.databaselocation + Database_adapter.databasename;
       OutputStream outputStream = new FileOutputStream(strFile);
       byte[] buff = new byte[1024];
       int length = 0;

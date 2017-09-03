@@ -16,7 +16,10 @@
 package com.fz.fzapp.service;
 
 import com.fz.fzapp.pojo.LoginPojo;
+import com.fz.fzapp.pojo.ReasonPojo;
 import com.fz.fzapp.pojo.TaskListPojo;
+import com.fz.fzapp.sending.ReasonHolder;
+import com.fz.fzapp.sending.SyncTrxHolder;
 import com.fz.fzapp.sending.TaskListHolder;
 import com.fz.fzapp.sending.UserHolder;
 import com.fz.fzapp.utils.FixValue;
@@ -45,5 +48,12 @@ public interface DataLink
 
   @POST(FixValue.RestfulTasklist)
   Call<TaskListPojo> TaskListService(@Body TaskListHolder taskListHolder);
+
+  @POST(FixValue.RestfulReasonlist)
+  Call<ReasonPojo> ReasonListService(@Body ReasonHolder reasonHolder);
+
+
+  @POST(FixValue.RestfulTasklistTrx)
+  Call<LoginPojo> SyncTrxService(@Body SyncTrxHolder syncTrxHolder);
 }
 

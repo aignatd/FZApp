@@ -14,7 +14,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.fz.fzapp.R;
-import com.fz.fzapp.adapter.adapter_AllTaskList;
+import com.fz.fzapp.adapter.AllTaskList_adapter;
 import com.fz.fzapp.data.TaskList;
 import com.fz.fzapp.pojo.TaskListPojo;
 import com.fz.fzapp.popup.OtherOption;
@@ -101,11 +101,10 @@ public class SyncData extends AppCompatActivity
           }
           else if(response.body().getCoreResponse().getCode() == FixValue.intSuccess)
           {
-            Log.d(TAG, "onResponse: 2");
             AllFunction.storeToSharedPref(context, 1, Preference.prefDutyTask);
 
-            adapter_AllTaskList.initAllTaskList();
-            adapter_AllTaskList.getInstance().setAlltaskList(response.body().getTaskListResponse());
+            AllTaskList_adapter.initAllTaskList();
+            AllTaskList_adapter.getInstance().setAlltaskList(response.body().getTaskListResponse());
 
             Intent NamaUserIntent = new Intent(SyncData.this, Planning.class);
             startActivity(NamaUserIntent);

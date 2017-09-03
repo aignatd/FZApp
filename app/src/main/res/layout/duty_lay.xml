@@ -12,7 +12,7 @@
 
     <TextView
        style="@style/DefaultUtils3"
-       android:text="@string/titleTugas1"
+       android:text="@string/titleDuty1"
        android:id="@+id/textView"
        android:layout_alignParentTop="true"
        android:layout_alignParentLeft="true"
@@ -20,7 +20,7 @@
 
     <TextView
        style="@style/DefaultHead1"
-       android:text="@string/titleTugas2"
+       android:text="@string/titleDuty2"
        android:layout_alignParentTop="true"
        android:layout_toRightOf="@+id/textView"
        android:layout_toEndOf="@+id/textView"

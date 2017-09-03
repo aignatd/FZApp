@@ -44,6 +44,14 @@
            android:name=".common.Duty"
            android:screenOrientation="portrait">
         </activity>
+        <activity
+          android:name=".common.Reason"
+          android:screenOrientation="portrait">
+        </activity>
+        <activity
+          android:name=".common.Recap"
+          android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
