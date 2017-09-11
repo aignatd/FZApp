@@ -51,6 +51,10 @@ public class Duty extends AppCompatActivity implements GoogleApiClient.Connectio
 	TextView tvActTime;
 	@BindView(R.id.tvCountTime)
 	TextView tvCountTime;
+	@BindView(R.id.tvTrackTest)
+	TextView tvTrackTest;
+	@BindView(R.id.tvCountTimeSecond)
+	TextView tvCountTimeSecond;
 
 	private PopupMessege popupMessege = new PopupMessege();
 	static ProgressDialog progressDialog;
@@ -143,6 +147,11 @@ public class Duty extends AppCompatActivity implements GoogleApiClient.Connectio
 			String hms = String.format("%02d:%02d", TimeUnit.MILLISECONDS.toHours(millis),
 				TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)));
 			tvCountTime.setText(hms);
+
+
+			hms = String.format("%02d", TimeUnit.MILLISECONDS.toSeconds(millis) -
+				TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
+			tvCountTimeSecond.setText(hms);
 		}
 
 		@Override
@@ -309,9 +318,11 @@ public class Duty extends AppCompatActivity implements GoogleApiClient.Connectio
 	}
 
 	@Override
-	public void onLocationChanged(Location location) {
+	public void onLocationChanged(Location location)
+	{
 		mLastLocation = location;
 		TimerToTrackLocation.cancel();
+		tvTrackTest.setText("Lat : " + String.valueOf(mLastLocation.getLatitude()) + ", Long : " + String.valueOf(mLastLocation.getLongitude()));
 		SaveTrackToSQLite(String.valueOf(mLastLocation.getLatitude()), String.valueOf(mLastLocation.getLongitude()), null, null);
 		TimerToTrackLocation.start();
 	}
